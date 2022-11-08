@@ -10,7 +10,7 @@ function App(){
         {notes.map(note => (
             <Note 
             key = {note.key}
-            id = {note.id}
+            id = {note.key}
             title = {note.title}
             content = {note.content}
             />
