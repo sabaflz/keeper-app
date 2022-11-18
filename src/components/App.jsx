@@ -13,7 +13,6 @@ function App(){
         setNotes(prevNotes => {
             return [...prevNotes, newNote];
         });
-        console.log(notes);
     }
 
     function deleteNote(id){
