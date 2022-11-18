@@ -19,3 +19,6 @@ root.render(<App />);
 
 //This is the end result you're aiming for:
 //https://pogqj.csb.app/
+
+
+//React Dependencies & Styling the Keeper App

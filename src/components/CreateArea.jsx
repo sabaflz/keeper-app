@@ -2,32 +2,31 @@ import React, {useState} from "react";
 
 function CreateArea(props) {
 
-    const [note, setNote] = useState({
-        title: "",
-        content:""
+  const [note, setNote] = useState({
+      title: "",
+      content:""
     });
 
-    function updateNote(event){
-        const {name, value} = event.target;
-        setNote(prevNotes => {
-            return {
-                ...prevNotes,
-                [name]: value
-            }
+  function updateNote(event){
+      const {name, value} = event.target;
+      setNote(prevNotes => {
+          return {
+              ...prevNotes,
+              [name]: value
+          };
         });
     }
 
-    function passNote(event){
-        props.onAdd(note);
-        setNote({title: "", content:""});
-        //by default when the add button is clicked, it refreshes the page
-        event.preventDefault();
+  function passNote(event){
+      props.onAdd(note);
+      setNote({title: "", content:""});
+      //by default when the add button is clicked, it refreshes the page
+      event.preventDefault();
     }
-
 
   return (
     <div>
-      <form>
+      <form className="create-note">
         <input 
             onChange={updateNote} 
             name="title" 

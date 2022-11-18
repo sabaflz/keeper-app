@@ -17,12 +17,10 @@ function App(){
 
     function deleteNote(id){
         setNotes(prevNotes => {
-            return prevNotes.filter(
-                (item, index) => {
+            return prevNotes.filter((item, index) => {
                     return index !== id;
-                }
-                );
-        })
+                });
+        });
     }
 
     return (
@@ -30,13 +28,15 @@ function App(){
             <Header />
             <CreateArea onAdd={createNote}/>
             {notes.map((note, index) => {
-                return <Note 
-                key={index} 
-                id={index} 
-                title={note.title} 
-                content={note.content} 
-                onDelete={deleteNote}
-                />
+                return (
+                    <Note 
+                        key={index} 
+                        id={index} 
+                        title={note.title} 
+                        content={note.content} 
+                        onDelete={deleteNote}
+                    />
+                );
             })}
             <Footer />
         </div>
@@ -44,13 +44,3 @@ function App(){
 }
 
 export default App;
-
-// import notes from "../notes";
-// {notes.map(note => (
-//     <Note 
-//     key = {note.key}
-//     id = {note.key}
-//     title = {note.title}
-//     content = {note.content}
-//     />
-// ))}
