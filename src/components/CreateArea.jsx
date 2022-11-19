@@ -51,7 +51,7 @@ function CreateArea(props) {
         />
 
         {/* Add Floating Action Button */}
-        <Zoom in={isExpanded ? true : false}>
+        <Zoom in={isExpanded}>
           <Fab onClick={passNote}>
             <AddIcon />
           </Fab>
