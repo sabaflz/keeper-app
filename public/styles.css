@@ -9,7 +9,8 @@
   }
 
   body {
-    background: #eee;
+    background-color: #eeeeee;
+    background-image: url("https://transparenttextures.com/patterns/brushed-alum-dark.png");
     padding: 0 16px;
   }
   
